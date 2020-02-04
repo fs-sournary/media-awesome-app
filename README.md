@@ -23,3 +23,5 @@
 ##### 5. [Single Activity](https://www.youtube.com/watch?v=2k8x8V77CrU)
 ## Architecture
 The sample uses MVVM architecture.
+## Note
+Nh
