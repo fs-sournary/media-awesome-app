@@ -24,4 +24,4 @@
 ## Architecture
 The sample uses MVVM architecture.
 ## Note
-Những thứ nhỏ nhặt nhất l
+Những thứ nhỏ nhặt nhất là những thứ quan trọng nhất.
