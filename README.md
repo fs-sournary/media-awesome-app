@@ -10,5 +10,5 @@
 - [View Binding](https://developer.android.com/topic/libraries/view-binding)
 - [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager/)
 
-2 [Media architecture](https://developer.android.com/guide/topics/media-apps/media-apps-overview)
+2. [Media architecture](https://developer.android.com/guide/topics/media-apps/media-apps-overview)
 
