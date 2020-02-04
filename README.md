@@ -5,6 +5,7 @@
 ## Tools
 ##### 1. Kotlin
 - [Kotlin](https://kotlinlang.org/docs/reference/)
+- Important: [Coding convertion](https://kotlinlang.org/docs/reference/coding-conventions.html)
 ##### 2. [Architecture components](https://developer.android.com/topic/libraries/architecture)
 - [Room database](https://developer.android.com/jetpack/androidx/releases/room)
 - [Lifecycle-aware component](https://developer.android.com/topic/libraries/architecture/lifecycle)
