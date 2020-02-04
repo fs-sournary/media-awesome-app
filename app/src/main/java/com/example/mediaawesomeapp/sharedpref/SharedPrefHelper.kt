@@ -2,7 +2,6 @@ package com.example.mediaawesomeapp.sharedpref
 
 import android.content.Context
 import androidx.core.content.edit
-import com.example.mediaawesomeapp.util.Constants
 
 /**
  * Created at 2020-02-03 by Sang
@@ -10,7 +9,7 @@ import com.example.mediaawesomeapp.util.Constants
 class SharedPrefHelper(context: Context) {
 
     private val sharedPreferences = context.applicationContext.getSharedPreferences(
-        Constants.SHARED_PREF_NAME, Context.MODE_PRIVATE
+        SHARED_PREF_NAME, Context.MODE_PRIVATE
     )
 
     fun setString(key: String, value: String) = sharedPreferences.edit { putString(key, value) }
@@ -34,4 +33,9 @@ class SharedPrefHelper(context: Context) {
     fun clear() = sharedPreferences.edit { clear() }
 
     fun remove(key: String) = sharedPreferences.edit { remove(key) }
+
+    companion object {
+
+        private const val SHARED_PREF_NAME = "com.example.architecture.android"
+    }
 }

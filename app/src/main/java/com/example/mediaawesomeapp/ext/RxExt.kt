@@ -1,4 +1,4 @@
-package com.example.mediaawesomeapp.extension
+package com.example.mediaawesomeapp.ext
 
 import io.reactivex.FlowableTransformer
 import io.reactivex.ObservableTransformer

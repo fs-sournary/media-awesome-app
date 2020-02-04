@@ -1,4 +1,4 @@
-package com.example.mediaawesomeapp.extension
+package com.example.mediaawesomeapp.ext
 
 import android.view.View
 import android.widget.EditText
