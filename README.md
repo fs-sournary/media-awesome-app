@@ -24,4 +24,4 @@
 ## Architecture
 The sample uses MVVM architecture.
 ## Note
-Nh
+Những thứ nhỏ nhặt nhất l
