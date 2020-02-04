@@ -1,6 +1,6 @@
 # media-awesome-app
 ## API
-- From [Zing Mp3](https://docs.google.com/spreadsheets/d/1cIa4Sx8voAv8g6-QjDaYuZhW4l7HcjTrO3AiwTOEoDQ/edit#gid=230049960)
+- From [Zing Mp3](https://docs.google.com/spreadsheets/d/1cIa4Sx8voAv8g6-QjDaYuZhW4l7HcjTrO3AiwTOEoDQ/edit?usp=sharing)
 
 ## Tools
 ##### 1. [Architecture components](https://developer.android.com/topic/libraries/architecture)
