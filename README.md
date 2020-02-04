@@ -14,3 +14,4 @@
 - [Become a master window filter](https://www.youtube.com/watch?v=_mGDMVRO3iE)
 - [Gesture Navigation: Insets](https://www.youtube.com/watch?v=82eH0s9UO6o)
 - [Android 10: Gestural Navigation](https://www.youtube.com/watch?v=Ljtz7T8R_Hk)
+4. (Single Activity)(https://www.youtube.com/watch?v=2k8x8V77CrU)
