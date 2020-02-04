@@ -11,4 +11,7 @@
 - [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager/)
 
 2. [Media architecture](https://developer.android.com/guide/topics/media-apps/media-apps-overview)
-
+3. Window and WindowInsets
+- [Become a master window filter](https://www.youtube.com/watch?v=_mGDMVRO3iE)
+- [Gesture Navigation: Insets](https://www.youtube.com/watch?v=82eH0s9UO6o)
+- [Android 10: Gestural Navigation](https://www.youtube.com/watch?v=Ljtz7T8R_Hk)
