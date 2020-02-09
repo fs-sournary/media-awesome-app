@@ -1,6 +1,5 @@
 package com.example.mediaawesomeapp.sharedpref
 
-import com.example.mediaawesomeapp.util.Constants
 import java.util.*
 
 /**
@@ -9,16 +8,23 @@ import java.util.*
 class AppSharedPref(private val sharedPrefHelper: SharedPrefHelper) {
 
     fun setAccessToken(value: String) {
-        sharedPrefHelper.setString(Constants.KEY_ACCESS_TOKEN, value)
+        sharedPrefHelper.setString(KEY_ACCESS_TOKEN, value)
     }
 
     fun getAccessToken(): String =
-        sharedPrefHelper.getString(Constants.KEY_ACCESS_TOKEN, Constants.DEF_ACCESS_TOKEN)
+        sharedPrefHelper.getString(KEY_ACCESS_TOKEN, DEF_ACCESS_TOKEN)
 
     fun setLanguage(value: String) {
-        sharedPrefHelper.setString(Constants.KEY_LANGUAGE, value)
+        sharedPrefHelper.setString(KEY_LANGUAGE, value)
     }
 
     fun getLanguage(): String =
-        sharedPrefHelper.getString(Constants.KEY_LANGUAGE, Locale.getDefault().language)
+        sharedPrefHelper.getString(KEY_LANGUAGE, Locale.getDefault().language)
+
+    companion object {
+
+        const val KEY_ACCESS_TOKEN = "KEY_ACCESS_TOKEN"
+        const val DEF_ACCESS_TOKEN = ""
+        const val KEY_LANGUAGE = "KEY_LANGUAGE"
+    }
 }
