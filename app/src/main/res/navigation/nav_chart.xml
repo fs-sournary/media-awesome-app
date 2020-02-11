@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_chart"
+    app:startDestination="@id/chart_dest">
+
+    <fragment
+        android:id="@+id/chart_dest"
+        android:name="com.example.mediaawesomeapp.ui.chart.ChartFragment"
+        tools:layout="@layout/fragment_chart" />
+</navigation>

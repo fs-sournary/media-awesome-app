@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ArchitectureComponentStructure</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="retry">Retry</string>
+    <string name="home">Home</string>
+    <string name="mv">M-V</string>
+    <string name="following">Following</string>
+    <string name="chart">Chart</string>
+    <string name="my_music">My music</string>
+    <string name="search_hint">Search&#8230;</string>
 </resources>

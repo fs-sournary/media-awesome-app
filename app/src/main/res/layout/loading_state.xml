@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.mediaawesomeapp.model.Resource" />
+
+        <import type="com.example.mediaawesomeapp.model.Status" />
+
+        <variable
+            name="resource"
+            type="Resource" />
+
+        <variable
+            name="retryListener"
+            type="com.example.mediaawesomeapp.ui.common.RetryListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:visibleGone="@{resource.data == Status.LOADING}" />
+
+        <TextView
+            android:id="@+id/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{resource.msg ?? @string/unknown_error}"
+            tools:text="No internet connect" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> retryListener.retry()}"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/retry" />
+    </LinearLayout>
+</layout>

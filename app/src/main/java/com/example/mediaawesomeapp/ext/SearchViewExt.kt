@@ -34,7 +34,8 @@ fun SearchView.fromView(
 }
 
 @BindingAdapter(
-    value = ["searchTextSize", "searchTextColor", "removeSearchButtonPadding"], requireAll = false
+    value = ["searchTextSize", "searchTextColor", "removeSearchButtonPadding"],
+    requireAll = false
 )
 fun SearchView.customWidget(size: Float, @IdRes textColorId: Int, removed: Boolean) {
     val searchText = findViewById<View>(R.id.search_src_text)
