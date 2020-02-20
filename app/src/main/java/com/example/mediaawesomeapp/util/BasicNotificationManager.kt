@@ -1,4 +1,4 @@
-package com.example.mediaawesomeapp.util.notification
+package com.example.mediaawesomeapp.util
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -54,8 +54,12 @@ class BasicNotificationManager(private val context: Context) {
     fun createNotificationChannel(important: Int = NotificationManager.IMPORTANCE_DEFAULT) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
         val channel = NotificationChannel(
-            NOTIFICATION_CHANNEL_ID, NOTIFICATION_CHANNEL_NAME, important
-        ).apply { description = NOTIFICATION_CHANNEL_DESCRIPTION }
+            NOTIFICATION_CHANNEL_ID,
+            NOTIFICATION_CHANNEL_NAME, important
+        ).apply {
+            description =
+                NOTIFICATION_CHANNEL_DESCRIPTION
+        }
         val notificationManager =
             context.applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.createNotificationChannel(channel)

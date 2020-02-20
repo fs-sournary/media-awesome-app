@@ -2,14 +2,15 @@ package com.example.mediaawesomeapp.util
 
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.Toolbar
+import androidx.core.view.updateLayoutParams
 import androidx.core.view.updatePadding
 import com.example.mediaawesomeapp.R
 import com.google.android.material.appbar.AppBarLayout
 
 /**
  * Created at 2020-01-02 by Sang
- * Important class that make app can fit system window.
+ *
+ * Class that make app can fit system window.
  */
 object EdgeToEdge {
 
@@ -18,11 +19,13 @@ object EdgeToEdge {
             View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
     }
 
-    fun setupAppBar(appbar: AppBarLayout, toolbar: Toolbar) {
-        val toolbarPadding = toolbar.resources.getDimensionPixelSize(R.dimen.dp_16)
+    fun setupAppBar(appbar: AppBarLayout, child: View) {
+        val toolbarPadding = child.resources.getDimensionPixelSize(R.dimen.dp_16)
         appbar.setOnApplyWindowInsetsListener { _, insets ->
-            appbar.updatePadding(top = insets.systemWindowInsetTop)
-            toolbar.updatePadding(
+            child.updateLayoutParams<AppBarLayout.LayoutParams> {
+                topMargin = insets.systemWindowInsetTop
+            }
+            child.updatePadding(
                 left = toolbarPadding + insets.systemWindowInsetLeft,
                 right = insets.systemWindowInsetRight
             )

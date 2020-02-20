@@ -8,7 +8,7 @@ import java.util.*
 /**
  * Created at 2020-02-03 by Sang
  */
-class LocaleHelper(private val appSharedPref: AppSharedPref) {
+class LocaleManager(private val appSharedPref: AppSharedPref) {
 
     fun onAttach(context: Context): Context = getNewContext(context, appSharedPref.getLanguage())
 
