@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.mediaawesomeapp.di.appModule
 import com.example.mediaawesomeapp.di.networkModule
 import com.example.mediaawesomeapp.di.repositoryModule
+import com.example.mediaawesomeapp.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import timber.log.Timber
@@ -19,7 +20,11 @@ class MediaApp : Application() {
         // Koin
         startKoin {
             androidContext(this@MediaApp)
-            modules(listOf(appModule, networkModule, repositoryModule))
+            modules(listOf(
+                appModule,
+                viewModelModule,
+                networkModule,
+                repositoryModule))
         }
     }
 }
