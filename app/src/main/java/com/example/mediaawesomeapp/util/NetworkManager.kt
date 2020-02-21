@@ -2,8 +2,10 @@ package com.example.mediaawesomeapp.util
 
 import android.content.Context
 import com.example.mediaawesomeapp.BuildConfig
-import com.example.mediaawesomeapp.api.MovieApi
-import com.example.mediaawesomeapp.api.MusicApi
+import com.example.mediaawesomeapp.api.ChartApi
+import com.example.mediaawesomeapp.api.HomeApi
+import com.example.mediaawesomeapp.api.SearchApi
+import com.example.mediaawesomeapp.api.SongApi
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -22,11 +24,17 @@ object NetworkManager {
     private const val WRITE_TIMEOUT = 10L
     private const val READ_TIMEOUT = 10L
 
-    fun createMovieApi(context: Context): MovieApi =
-        createRetrofit(BuildConfig.MOVIE_BASE_URL, context).create(MovieApi::class.java)
+    fun createSongApi(context: Context): SongApi =
+        createRetrofit(BuildConfig.MUSIC_BASE_URL, context).create(SongApi::class.java)
 
-    fun createMusicApi(context: Context): MusicApi =
-        createRetrofit(BuildConfig.MUSIC_BASE_URL, context).create(MusicApi::class.java)
+    fun createChartApi(context: Context): ChartApi =
+        createRetrofit(BuildConfig.MUSIC_BASE_URL, context).create(ChartApi::class.java)
+
+    fun createHomeApi(context: Context): HomeApi =
+        createRetrofit(BuildConfig.MUSIC_BASE_URL, context).create(HomeApi::class.java)
+
+    fun createSearchApi(context: Context): SearchApi =
+        createRetrofit(BuildConfig.MUSIC_BASE_URL, context).create(SearchApi::class.java)
 
     private fun createRetrofit(url: String, context: Context): Retrofit = Retrofit.Builder().apply {
         baseUrl(url)

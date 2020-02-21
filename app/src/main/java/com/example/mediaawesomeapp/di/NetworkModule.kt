@@ -8,6 +8,8 @@ import org.koin.dsl.module
  * Created at 2020-02-08 by Sang
  */
 val networkModule = module {
-    single { NetworkManager.createMusicApi(androidApplication()) }
-    single { NetworkManager.createMovieApi(androidApplication()) }
+    single { NetworkManager.createSongApi(androidApplication()) }
+    single { NetworkManager.createChartApi(androidApplication()) }
+    single { NetworkManager.createHomeApi(androidApplication()) }
+    single { NetworkManager.createSearchApi(androidApplication()) }
 }
