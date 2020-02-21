@@ -4,4 +4,4 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class Zma : BaseTotalModel<List<Album>>(), Parcelable
+class Zma : BaseItemsModel<Album>(), Parcelable

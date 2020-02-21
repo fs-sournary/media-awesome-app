@@ -28,10 +28,10 @@ data class Artist(
 ) : Parcelable
 
 @Parcelize
-class ArtistSong: BaseTotalModel<Song>(), Parcelable
+class ArtistSong: BaseItemsModel<Song>(), Parcelable
 
 @Parcelize
-class ArtistAlbum: BaseTotalModel<Album>(), Parcelable
+class ArtistAlbum: BaseItemsModel<Album>(), Parcelable
 
 @Parcelize
-class ArtistVideo: BaseTotalModel<Video>(), Parcelable
+class ArtistVideo: BaseItemsModel<Video>(), Parcelable
