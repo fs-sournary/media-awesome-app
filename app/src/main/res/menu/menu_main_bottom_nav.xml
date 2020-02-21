@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_my_music"
+        android:icon="@drawable/ic_tab_account"
+        android:title="@string/my_music" />
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_tab_home"
         android:title="@string/home" />
 
     <item
+        android:id="@+id/nav_chart"
+        android:icon="@drawable/ic_tab_chart"
+        android:title="@string/chart" />
+
+    <item
         android:id="@+id/nav_mv"
-        android:icon="@drawable/ic_mv"
+        android:icon="@drawable/ic_tab_video"
         android:title="@string/mv" />
 
     <item
         android:id="@+id/nav_following"
-        android:icon="@drawable/ic_following"
+        android:icon="@drawable/ic_tab_feed"
         android:title="@string/following" />
-
-    <item
-        android:id="@+id/nav_chart"
-        android:icon="@drawable/ic_chart"
-        android:title="@string/chart" />
-
-    <item
-        android:id="@+id/nav_my_music"
-        android:icon="@drawable/ic_my_music"
-        android:title="@string/my_music" />
 </menu>
