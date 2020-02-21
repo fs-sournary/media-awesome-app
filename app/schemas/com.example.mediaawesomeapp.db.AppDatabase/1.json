@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "40b032e7b37b16d68ad568cbf736e57c",
+    "identityHash": "0bc01cd9ab11f247f29d26e0f82aaa87",
     "entities": [
       {
         "tableName": "library",
@@ -91,24 +91,162 @@
       },
       {
         "tableName": "song",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`song_id` INTEGER NOT NULL, `name` TEXT, `short_name` TEXT, PRIMARY KEY(`song_id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`song_id` TEXT NOT NULL, `title` TEXT, `artistsNames` TEXT, `rawId` INTEGER, `alias` TEXT, `isZma` INTEGER, `link` TEXT, `thumbnail` TEXT, `isOfficial` INTEGER, `zingChoice` INTEGER, `allowAudioAds` INTEGER, `thumbnailMedium` TEXT, `lyric` TEXT, `listen` INTEGER, `statusName` TEXT, `statusCode` INTEGER, `createdAt` INTEGER, `releasedAt` INTEGER, `privacy` TEXT, `streamingStatus` INTEGER, `isVN` INTEGER, `duration` INTEGER, `publicStatus` INTEGER, `isWorldwide` INTEGER, `userId` INTEGER, `like` INTEGER, PRIMARY KEY(`song_id`))",
         "fields": [
           {
             "fieldPath": "id",
             "columnName": "song_id",
-            "affinity": "INTEGER",
+            "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "name",
-            "columnName": "name",
+            "fieldPath": "title",
+            "columnName": "title",
             "affinity": "TEXT",
             "notNull": false
           },
           {
-            "fieldPath": "shortName",
-            "columnName": "short_name",
+            "fieldPath": "artistsNames",
+            "columnName": "artistsNames",
             "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rawId",
+            "columnName": "rawId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alias",
+            "columnName": "alias",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isZma",
+            "columnName": "isZma",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "link",
+            "columnName": "link",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "thumbnail",
+            "columnName": "thumbnail",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isOfficial",
+            "columnName": "isOfficial",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zingChoice",
+            "columnName": "zingChoice",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "allowAudioAds",
+            "columnName": "allowAudioAds",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "thumbnailMedium",
+            "columnName": "thumbnailMedium",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lyric",
+            "columnName": "lyric",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "listen",
+            "columnName": "listen",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "statusName",
+            "columnName": "statusName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "statusCode",
+            "columnName": "statusCode",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "releasedAt",
+            "columnName": "releasedAt",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "privacy",
+            "columnName": "privacy",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "streamingStatus",
+            "columnName": "streamingStatus",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isVN",
+            "columnName": "isVN",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "publicStatus",
+            "columnName": "publicStatus",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isWorldwide",
+            "columnName": "isWorldwide",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "like",
+            "columnName": "like",
+            "affinity": "INTEGER",
             "notNull": false
           }
         ],
@@ -120,12 +258,12 @@
         },
         "indices": [
           {
-            "name": "index_song_name",
+            "name": "index_song_title",
             "unique": false,
             "columnNames": [
-              "name"
+              "title"
             ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_song_name` ON `${TABLE_NAME}` (`name`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_song_title` ON `${TABLE_NAME}` (`title`)"
           }
         ],
         "foreignKeys": []
@@ -166,7 +304,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '40b032e7b37b16d68ad568cbf736e57c')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0bc01cd9ab11f247f29d26e0f82aaa87')"
     ]
   }
 }
